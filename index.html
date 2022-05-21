@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Project-2 Todo App UI Web - Responsive</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="main-container">
+ 
+        <div class="nav">
+            <h1>Tasks<span>Lists</span></h1>
+            <a href="#overlay">
+            <div class="add-list"><button>+</button> </a><p>Add List</p></div>
+        </div>
+       
+        <div class="card-container">
+            
+            <div class="cards">
+                <a href="./trip-to-paris.html" target="_self">
+                <h1 class="card-title">Trip to Paris</h1> </a>  
+                <hr>
+                <p><strike>Completed task</strike></p>
+                <input type="checkbox"><span>Pending task </span> 
+           
+            </div>
+       
+            
+            <div class="cards">
+                <h1 class="card-title">My Todo List</h1>
+                <hr>
+                <p><strike>Completed task</strike></p>
+                <input type="checkbox"><span>Pending task </span>  
+            </div>
+
+            <div class="cards">
+                <h1 class="card-title">My Todo List</h1>
+                <hr>
+                <p><strike>Completed task</strike></p>
+                <input type="checkbox"><span>Pending task </span>  
+            </div>
+
+        </div>
+    </div>
+    
+    <!-- popup -->
+    <div class="overlay" id="overlay">
+             <div class="new-list">
+            <div><h1>Add New List</h1></div>
+            <div><input type="text"></div>
+            <a href="#"><button>ADD</button></a>
+        </div>
+    </div>
+    </div>
+
+
+</body>
+</html>

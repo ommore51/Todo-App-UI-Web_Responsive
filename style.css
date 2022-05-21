@@ -1,0 +1,238 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700&display=swap");
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Roboto", sans-serif;
+}
+
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.main-container{
+    height: 100vh;
+    width: 60vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
+}
+.nav{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    margin-bottom: 26px;
+}
+.nav a{
+    text-decoration: none;
+
+}
+.nav h1{
+    font-size: 50px;
+  
+}
+.nav span{
+    color: rgba(0,0,0,0.5);
+    font-weight: 100;
+}
+.nav .add-list{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.nav .add-list button{
+    background-color: orangered;
+    font-size: 25px;
+    border-radius: 50%;
+    height: 33px;
+    width: 33px;
+    border:none;
+    color: #fff;
+    font-weight: 600;
+    cursor: pointer;
+}
+.nav .add-list  p{
+    color: rgba(0,0,0,0.5);
+    font-size: 25px;
+    margin-left: 10px;
+
+}
+.card-container{
+    display: flex;
+    justify-content: space-between;
+    align-items: center; 
+    width: 100%;  
+}
+.cards{
+    border: 1px solid red;
+    height: 355px;
+    width: 230px;
+    padding: 25px;
+    border-radius: 8px;
+    box-shadow: 5px 5px 5px rgba(0,0,0,0.5);
+}
+
+.card-title {
+    color: red;
+    font-weight: 300;
+    font-size:25px;
+    cursor: pointer;
+    text-decoration: none;
+
+}
+.cards p{
+    margin-top: 55px;
+    color: red;
+    font-size: 22px;
+}
+.cards input{
+    margin-top: 25px;
+    cursor: pointer;
+}
+.cards span{
+    font-size: 20px;
+    padding: 8px;
+    color: #000;
+}
+.cards a{
+    text-decoration: none;
+    
+}
+
+/* popup */
+.overlay{
+    position: absolute;
+    height: 100vh;
+    width: 100vw;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    background: rgba(255, 255, 255, 0.7);
+    backdrop-filter: blur(2px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    display: none;
+}
+.overlay:target {
+    display: flex;
+  }
+
+.new-list{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    border: 1px solid red;
+    height: 180px;
+    width: 400px;
+    border-radius: 8px;
+    background: #fff;
+}
+.new-list h1{
+    font-size: 22px;
+    color: red;
+    font-weight: 500;
+    text-align: center;
+    margin-top: 30px;
+}
+.new-list div{
+    width: 100%;
+    text-align: center;
+}
+.new-list  input{
+    margin-top: 30px;
+    width: 60%;
+    height: 30px;
+    padding: 15px;
+    border-radius: 5px;
+    border: 1px solid red;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+    outline: none;
+}
+.new-list button{
+    margin: 20px 0;
+    background-color: red;
+    font-size: 20px;
+    height: 33px;
+    width: 80px;
+    border: none;
+    border-radius: 20px;
+    color: #fff;
+}
+
+/* media Qureies */
+@media screen and (min-width:240px) and (max-width:900px) {
+  
+    .main-container{
+        height: 100vh;
+        width: 90vw;
+    }
+    .nav{
+        display: flex;
+        width: 100%;
+    }
+    .nav h1,span{
+        font-size: 50px;
+    }
+    .nav span{
+        color: #000;
+    }
+    .add-list{
+        margin: 0;
+    }
+    .add-list p{
+        display: none;
+    }   
+    .card-container{
+        flex-direction: column;
+    }
+    .cards{
+        height: 10vh;
+        width: 100%;
+        display: flex;
+        justify-content: start;
+        align-items: center;
+        margin-bottom: 20px;
+        box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.5);
+        border: 1px solid rgba(255, 0, 0, 0.5);
+    }
+    .cards h1 {
+        margin: 0;
+        margin-left: 20px;
+        color: rgba(0, 0, 0, 0.8);
+        font-size: 22px;
+      }
+
+      .nav .add-list{
+      }
+
+      .nav span:nth-child(1){
+          display: inline-block;
+      }
+
+      .cards hr, p,input,span{
+          display: none;
+      }
+      .new-list {
+        width: 90vw;
+        height: max-content;
+      }
+      .new-list input:nth-child(1){
+          display: inline-block;
+      }
+      .nav .add-list button{
+          height: 40px;
+          width: 40px;
+          font-size: 28px;
+      }
+
+    
+}

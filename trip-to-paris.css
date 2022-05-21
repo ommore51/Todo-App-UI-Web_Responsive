@@ -1,0 +1,221 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700&display=swap");
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family:"Roboto", sans-serif;
+}
+.container{
+    height: 100vh;
+    width: 90vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.container h2{
+    text-align: center;
+    font-size: 50px;
+    position: relative;
+}
+.container h2::before {
+    position: absolute;
+    content: "";
+    height: 2px;
+    width: 200px;
+    background: rgba(0, 0, 0, 0.5);
+    top: 50%;
+    right: 110%;
+  }
+  .container h2::after {
+    position: absolute;
+    content: "";
+    height: 2px;
+    width: 200px;
+    background: rgba(0, 0, 0, 0.5);
+    top: 50%;
+    left: 110%;
+  }
+
+
+
+.container .back{
+    display: flex; 
+    justify-content: center;
+    align-items: center;
+    margin-top: 40px;
+}
+.container .back p{
+    margin: 15px;
+    font-size: 25px;
+    color: gray;
+    font-weight: 500;
+}
+.container .back button{
+    background-color: orangered;
+    font-size: 20px;
+    border-radius: 50%;
+    height: 30px;
+    width: 30px;
+    border:none;
+    color: #fff;
+    cursor: pointer;
+    margin-top: 8px;
+}
+.card{
+    border: 1px solid red;
+    margin: 30px;
+    height: 355px;
+    width: 230px;
+    border-radius: 8px;
+    box-shadow: 5px 5px 5px rgba(0,0,0,0.5);
+    text-align: center;
+    position: relative;
+
+    
+}
+.card h1{
+    color: red;
+    font-weight: 300;
+    font-size:25px;
+    padding: 15px;
+    cursor: pointer;
+}
+.card p{
+    margin-top: 35px;
+    color: red;
+    font-size: 20px;
+}
+.card input{
+    margin-top: 25px;
+    cursor: pointer;
+}
+.card span{
+    font-size: 20px;
+    padding: 8px;
+}
+.card hr{
+    margin-left: 15%;
+}
+.add{
+    position: absolute;
+    bottom: 20px;
+    right: 15px;
+}
+.add button{
+    background-color: orangered;
+    font-size: 23px;
+    border-radius: 50%;
+    height: 33px;
+    width: 33px;
+    border:none;
+    color: #fff;
+    font-weight: 500;
+    cursor: pointer;
+    text-align: center;
+}
+
+/* popup */
+
+.overlay{
+    position: absolute;
+    height: 100vh;
+    width: 100vw;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    background: rgba(255, 255, 255, 0.7);
+    backdrop-filter: blur(2px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    display: none;
+}
+.overlay:target {
+    display: flex;
+  }
+
+.new-list{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    border: 1px solid red;
+    height: 180px;
+    width: 400px;
+    border-radius: 8px;
+    background: #fff;
+}
+.new-list h1{
+    font-size: 22px;
+    color: red;
+    font-weight: 500;
+    text-align: center;
+    margin-top: 30px;
+}
+.new-list div{
+    width: 100%;
+    text-align: center;
+}
+.new-list  input{
+    margin-top: 30px;
+    width: 60%;
+    height: 30px;
+    padding: 15px;
+    border-radius: 5px;
+    border: 1px solid red;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+    outline: none;
+}
+.new-list button{
+    margin: 20px 0;
+    background-color: red;
+    font-size: 20px;
+    height: 33px;
+    width: 80px;
+    border: none;
+    border-radius: 20px;
+    color: #fff;
+}
+
+/* media Qureies */
+@media screen and (min-width:240px) and (max-width:900px) {
+    .main-container{
+        height: 100vh;
+        width: 90vw;
+    }
+    .container h2{
+        font-size: 38px;
+    }
+    .container h2::before {
+        display: none;
+      }
+    
+      .container h2::after {
+        display: none;
+      }
+    
+      .container p {
+        display: none;
+      }
+      .card{
+          width: 80%;
+      }
+      .container .back {
+        margin: 0;
+        margin-right: 20px;
+      }
+      .new-list{
+          width: 90vw;
+      }
+
+      .res{
+          display: flex;
+          flex-direction: row-reverse;
+          align-items: center;
+      }
+
+
+}
